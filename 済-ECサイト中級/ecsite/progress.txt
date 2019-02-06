@@ -1,0 +1,16 @@
+﻿
+
+ユーザー登録が重複した場合にERROR画面を表示
+管理者IDでログインした場合に管理者用TOP画面を表示
+
+
+・(ok在庫数をdaoから取得)ｰ(ok購入数をactionから取得) <-(ok在庫数・更新日を新規insert)
+・X ファビコン
+・X MYSQLの文字化け
+・utf8mb4文字コードにより、絵文字USERNAMEが可能に
+・△MyPageActionから購入履歴を取り消す
+・購入するアイテムを選択する(itemSelect.jsp ERROR)
+loginDAO参照,
+BuyItemDAO(preparedStatement.setString(1, item_Name);)
+allItemNameList,allItemIdList
+

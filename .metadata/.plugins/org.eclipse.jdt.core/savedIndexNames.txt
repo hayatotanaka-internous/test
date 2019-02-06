@@ -1,0 +1,21 @@
+INDEX VERSION 1.131+D:\workspace-tanaka\test\.metadata\.plugins\org.eclipse.jdt.core
+2713923154.index
+1561008856.index
+3516434363.index
+3082098993.index
+3209675441.index
+3900295408.index
+2791481570.index
+2554226067.index
+1210938359.index
+2456770625.index
+2117425195.index
+3450580085.index
+2823678320.index
+4158766802.index
+359165838.index
+1402297754.index
+3565723299.index
+286782181.index
+314517080.index
+157298892.index

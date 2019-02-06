@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+D:\workspace-tanaka\test\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3082098993.index
+3518545035.index
+138717900.index
+1442166740.index
+3697153078.index
