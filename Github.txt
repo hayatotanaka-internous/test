@@ -1,0 +1,56 @@
+//START
+//Desktop\workspaceにworkspace-tanakaを作成
+
+cd C:\Users\kanem\Desktop\workspace\workspace-tanaka
+//workspace-tanakaへ移動
+
+git clone https://github.com/hayatotanaka-internous/test
+
+git config user.name "hayatotanaka-internous"
+
+git config user.email "mail-address"
+
+git config --system core.longpaths true
+//文字数上限無効(管理者として実行)
+
+cd Desktop\workspace\workspace-tanaka
+//cd C:\Users\kanem\Desktop\workspace\workspace-tanaka
+
+git pull
+//githubのデータを反映
+
+$git config --global core.autoCRLF false
+
+--cd /d D:
+--//Dドライブに直結
+
+cd C:\Users\testuser\Desktop\workspace\workspace-tanaka
+git clone https://github.com/hayatotanaka-internous/test
+
+git config user.name "hayatotanaka-internous"
+git config user.email "mail-address"
+cd test
+git init
+git pull
+
+git add --all
+git commit -m "mmdd.v"
+git remote set-url origin http://hayatotanaka-internous:"mail-address"@github.com/hayatotanaka-internous/test
+git push
+
+internous.dev@gmail.com internouslab
+//END
+
+git add --all
+//githubにアップロード　範囲選択
+
+git commit -m ""
+//""内に作業日の日付
+
+git push
+//githubにアップロード
+
+https://dev.mysql.com/downloads/connector/j/5.1.html
+
+
+
