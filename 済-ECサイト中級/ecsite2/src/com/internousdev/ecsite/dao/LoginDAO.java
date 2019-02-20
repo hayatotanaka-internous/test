@@ -22,9 +22,12 @@ public class LoginDAO {
 			pr.setString(2, loginPassword);
 			ResultSet rs = pr.executeQuery();
 			if (rs.next()) {
-				loginDTO.setLoginId(rs.getString("loginUserId"));
-				loginDTO.setLoginPassword(rs.getString("loginPassword"));
+				loginDTO.setLoginId(rs.getString("login_id"));
+				loginDTO.setLoginPassword(rs.getString("login_pass"));
 				loginDTO.setUserName(rs.getString("user_name"));
+				if(!(rs.getString("login_id").equals(null))){
+					loginDTO.setLoginFlg(true);
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

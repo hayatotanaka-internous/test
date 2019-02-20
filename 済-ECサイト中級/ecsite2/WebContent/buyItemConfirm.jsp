@@ -70,7 +70,7 @@ clear:both;
 			<s:form>
 				<tr>
 					<td>商品名：</td>
-					<td><s:property value ="session.buyItem_name"/></td>
+					<td><s:property value ="session.buyItem_Name"/></td>
 				</tr>
 				<tr>
 					<td>値段：</td>

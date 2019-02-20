@@ -35,7 +35,7 @@ git pull
 
 git add --all
 git commit -m "mmdd.v"
-git remote set-url origin http://hayatotanaka-internous:"mail-address"@github.com/hayatotanaka-internous/test
+git remote set-url origin http://hayatotanaka-internous:"password"@github.com/hayatotanaka-internous/test
 git push
 
 internous.dev@gmail.com internouslab
