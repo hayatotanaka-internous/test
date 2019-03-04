@@ -37,9 +37,6 @@ git commit -m "mmdd.v"
 git remote set-url origin http://hayatotanaka-internous:"password"@github.com/hayatotanaka-internous/test
 git push
 
-internous.dev@gmail.com internouslab
-//END
-
 git add --all
 //githubにアップロード　範囲選択
 
