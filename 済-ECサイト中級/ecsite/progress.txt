@@ -12,4 +12,4 @@
 ・購入するアイテムを選択する(itemSelect.jsp ERROR)
 
 
-BuyItemConfirmAction.session.get("loginUserId").toString() =>ERROR;
+NEXT =>ItemCreateCompleteAction,

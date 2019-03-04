@@ -28,9 +28,12 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 			result = ERROR;
 		}
 		String itid = session.get("id").toString();
-		String usid = session.get("login_user_id").toString();
+		String usid = session.get("loginUserId").toString();
 		if (deleteFlg == null) {
 			myPageList = myPageDAO.getMyPageUserInfo(itid, usid);
+			if (myPageList.isEmpty()) {
+				myPageList = null;
+			}
 		} else if (deleteFlg.equals("1")) {
 			delete();
 		}
@@ -40,7 +43,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 
 	public void delete() throws SQLException {
 		String itid = session.get("id").toString();
-		String usid = session.get("login_user_id").toString();
+		String usid = session.get("loginUserId").toString();
 		int res = myPageDAO.buyItemHistoryDelete(itid, usid);
 		if (res > 0) {
 			myPageList = null;

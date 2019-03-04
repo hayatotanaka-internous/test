@@ -71,9 +71,10 @@ select {
 			<p>BuyItem</p>
 		</div>
 	</div>
-	<div style="margin-left:50px">
+	<div style="margin-left: 50px">
 		<s:form action="BuyItemAction">
-			<div style="text-align: right; font-size: 18px; margin: 10px 50px 0 0;">
+			<div
+				style="text-align: right; font-size: 18px; margin: 10px 50px 0 0;">
 				<s:property value="session.userName" />
 				<span>様</span>
 			</div>
@@ -87,26 +88,26 @@ select {
 					<td><span>商品名</span></td>
 
 
-					<s:if test="session.buyItem_Name ==null">
+					<s:if test="session.buyItemName ==null">
 						<td><span style="margin-left: 20px">商品はありません。</span></td>
 					</s:if>
 					<s:else>
-						<td><s:property value="session.buyItem_Name" /><br></td>
+						<td><s:property value="session.buyItemName" /><br></td>
 					</s:else>
 				</tr>
 				<tr>
 					<td><span>値段</span></td>
-					<s:if test="session.buyItem_Price ==null">
-						<td><s:property value="session.buyItem_Price" /><span>null</span>
+					<s:if test="session.buyItemPrice ==null">
+						<td><s:property value="session.buyItemPrice" /><span>null</span>
 						</td>
 					</s:if>
 					<s:else>
-						<td><s:property value="session.buyItem_Price" /><span>円</span>
+						<td><s:property value="session.buyItemPrice" /><span>円</span>
 						</td>
 					</s:else>
 				</tr>
 
-				<s:if test="session.buyItem_Stock <1">
+				<s:if test="session.buyItemStock <1">
 					<tr>
 						<td><span>在庫数</span></td>
 						<td><span style="margin-left: 20px">在庫はありません。</span></td>
@@ -116,7 +117,7 @@ select {
 
 					<tr>
 						<td><span>在庫数</span></td>
-						<td><s:property value="session.buyItem_Stock" /><span>個</span>
+						<td><s:property value="session.buyItemStock" /><span>個</span>
 						</td>
 					</tr>
 					<tr>
@@ -137,7 +138,7 @@ select {
 		</s:form>
 		<div>
 			<p>
-				前画面に戻る場合は<a href='<s:url action ="GoHomeAction" />'>こちら</a>
+				前画面に戻る場合は<a href="javascript:history.back()">こちら</a>
 			</p>
 			<p>
 				マイぺージは<a href='<s:url action ="MyPageAction" />'>こちら</a>

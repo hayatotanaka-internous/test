@@ -26,7 +26,10 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		String result = ERROR;
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
 		session.put("loginUser", loginDTO);
-		if (((LoginDTO) session.get("loginUser")).getLoginFlg()) {
+		String admin = ((LoginDTO) session.get("loginUser")).getAdminFlg();
+		if ((admin != null) && (admin.equals("1"))) {
+			result = "admin";
+		} else if (((LoginDTO) session.get("loginUser")).getLoginFlg()) {
 			result = SUCCESS;
 			BuyItemDAO buyItemDAO = new BuyItemDAO();
 			BuyItemDTO buyItemDTO = (buyItemDAO.getBuyItemInfo());
@@ -35,11 +38,11 @@ public class LoginAction extends ActionSupport implements SessionAware {
 				itemStockList.add(i);
 			}
 			session.put("id", buyItemDTO.getId());
-			session.put("login_user_id",loginDTO.getLoginId());
-			session.put("buyItem_Name", buyItemDTO.getItemName());
-			session.put("buyItem_Price", buyItemDTO.getItemPrice());
-			session.put("buyItem_Stock", buyItemDTO.getItemStock());
-			session.put("userName",loginDTO.getUserName());
+			session.put("loginUserId", loginDTO.getLoginId());
+			session.put("buyItemName", buyItemDTO.getItemName());
+			session.put("buyItemPrice", buyItemDTO.getItemPrice());
+			session.put("buyItemStock", buyItemDTO.getItemStock());
+			session.put("userName", loginDTO.getUserName());
 			return result;
 		}
 		return result;

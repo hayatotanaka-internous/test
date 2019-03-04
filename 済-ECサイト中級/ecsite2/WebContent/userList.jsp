@@ -93,7 +93,7 @@ text-align:right;
 				</div>
 			</s:elseif>
 			<div id ="text-right">
-				<p>管理者画面へ戻る場合は<a href ='<s:url action ="AdminAction"/>'>こちら</a></p>
+				<p>管理者画面へ戻る場合は<a href="javascript:history.back()">こちら</a></p>
 			</div>
 		</div>
 	</div>
