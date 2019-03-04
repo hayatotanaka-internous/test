@@ -10,7 +10,6 @@
 ・utf8mb4文字コードにより、絵文字USERNAMEが可能に
 ・△MyPageActionから購入履歴を取り消す
 ・購入するアイテムを選択する(itemSelect.jsp ERROR)
-loginDAO参照,
-BuyItemDAO(preparedStatement.setString(1, item_Name);)
-allItemNameList,allItemIdList
 
+
+BuyItemConfirmAction.session.get("loginUserId").toString() =>ERROR;

@@ -71,8 +71,17 @@ select {
 			<p>BuyItem</p>
 		</div>
 	</div>
-	<div>
+	<div style="margin-left:50px">
 		<s:form action="BuyItemAction">
+			<div style="text-align: right; font-size: 18px; margin: 10px 50px 0 0;">
+				<s:property value="session.userName" />
+				<span>様</span>
+			</div>
+			<div style="text-align: right; margin-right: 50px">
+				<p>
+					<a href='<s:url action ="LogoutAction" />'>ログアウト</a>
+				</p>
+			</div>
 			<table>
 				<tr>
 					<td><span>商品名</span></td>

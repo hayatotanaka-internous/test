@@ -14,7 +14,6 @@ git config --system core.longpaths true
 //文字数上限無効(管理者として実行)
 
 cd Desktop\workspace\workspace-tanaka
-//cd C:\Users\kanem\Desktop\workspace\workspace-tanaka
 
 git pull
 //githubのデータを反映

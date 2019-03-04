@@ -70,11 +70,11 @@ clear:both;
 			<s:form>
 				<tr>
 					<td>商品名：</td>
-					<td><s:property value ="session.buyItem_Name"/></td>
+					<td><s:property value ="session.buyItemName"/></td>
 				</tr>
 				<tr>
 					<td>値段：</td>
-					<td><s:property value ="session.total_price"/><span>円</span></td>
+					<td><s:property value ="session.totalPrice"/><span>円</span></td>
 				</tr>
 				<tr>
 					<td>購入個数：</td>
@@ -82,7 +82,7 @@ clear:both;
 				</tr>
 				<tr>
 					<td>支払い方法：</td>
-					<td><s:property value ="session.pay"/></td>
+					<td><s:property value ="session.payment"/></td>
 				</tr>
 				<tr>
 					<td><input type ="button" value ="戻る" onclick ="submitAction('HomeAction')"/></td>

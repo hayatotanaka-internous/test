@@ -9,23 +9,23 @@ import com.internousdev.ecsite.util.DateUtil;
 
 public class BuyItemCompleteDAO {
 
-	private String sql = "INSERT INTO user_buy_item_info_transaction"
+	private String sql = "INSERT INTO user_buy_item_transaction"
 			+ "(item_transaction_id, total_price, total_count, user_master_id, pay, insert_date) "
 			+ "VALUES(?,?,?,?,?,?)";
 
-	public int buyItemInfo(String item_transaction_id, String total_price, String total_count, String login_user_id, String pay)
-			throws SQLException {
+	public int buyItemInfo(String itemTransactionId, String totalPrice, String totalCount, String loginUserId,
+			String payment) throws SQLException {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		DateUtil date = new DateUtil();
 		int count = 0;
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, item_transaction_id);
-			ps.setString(2, total_price);
-			ps.setString(3, total_count);
-			ps.setString(4, login_user_id);
-			ps.setString(5, pay);
+			ps.setString(1, itemTransactionId);
+			ps.setString(2, totalPrice);
+			ps.setString(3, totalCount);
+			ps.setString(4, loginUserId);
+			ps.setString(5, payment);
 			ps.setString(6, date.getDate());
 
 			count = ps.executeUpdate();

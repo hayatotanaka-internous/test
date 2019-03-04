@@ -19,17 +19,17 @@ public class BuyItemDAO {
 			PreparedStatement ps =con.prepareStatement(sql);
 			ResultSet rs =ps.executeQuery();
 			if(rs.next()){
-				buyItemDTO.setId(rs.getInt("id"));
+				buyItemDTO.setId(rs.getString("id"));
 				buyItemDTO.setItemName(rs.getString("item_name"));
-				buyItemDTO.setItemPrice(rs.getInt("item_price"));
-				buyItemDTO.setItemStock(rs.getInt("item_stock"));
-				if(rs.getInt("item_stock") <1){
+				buyItemDTO.setItemPrice(rs.getString("item_price"));
+				buyItemDTO.setItemStock(rs.getString("item_stock"));
+				if(rs.getInt(String.valueOf("item_stock")) <1){
 					String sql2 ="SELECT id, item_name, item_stock, FROM item_info_transaction WHERE id =id+1";
 					ps =con.prepareStatement(sql2);
-					buyItemDTO.setId(rs.getInt("id"));
+					buyItemDTO.setId(rs.getString("id"));
 					buyItemDTO.setItemName(rs.getString("item_name"));
-					buyItemDTO.setItemPrice(rs.getInt("item_price"));
-					buyItemDTO.setItemStock(rs.getInt("item_stock"));
+					buyItemDTO.setItemPrice(rs.getString("item_price"));
+					buyItemDTO.setItemStock(rs.getString("item_stock"));
 				}
 			}
 

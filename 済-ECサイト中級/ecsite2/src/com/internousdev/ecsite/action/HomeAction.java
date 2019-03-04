@@ -20,14 +20,14 @@ public class HomeAction extends ActionSupport implements SessionAware {
 		if (session.containsKey("id")) {
 			BuyItemDAO buyItemDAO = new BuyItemDAO();
 			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
-			int intItemStock = buyItemDTO.getItemStock();
+			int intItemStock = Integer.parseInt(buyItemDTO.getItemStock());
 			for (int i = 1; i <= intItemStock; i++) {
 				itemStockList.add(i);
 			}
 			session.put("id", buyItemDTO.getId());
-			session.put("buyItem_Name", buyItemDTO.getItemName());
-			session.put("buyItem_Price", String.valueOf(buyItemDTO.getItemPrice()));
-			session.put("buyItem_Stock", String.valueOf(buyItemDTO.getItemStock()));
+			session.put("buyItemName", buyItemDTO.getItemName());
+			session.put("buyItemPrice", String.valueOf(buyItemDTO.getItemPrice()));
+			session.put("buyItemStock", String.valueOf(buyItemDTO.getItemStock()));
 			result = SUCCESS;
 		}
 		return result;

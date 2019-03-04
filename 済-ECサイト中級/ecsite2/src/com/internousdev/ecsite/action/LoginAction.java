@@ -16,6 +16,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 	public String loginUserId;
 	public String loginPassword;
+	public String userName;
 	public Map<String, Object> session;
 	private LoginDAO loginDAO = new LoginDAO();
 	private LoginDTO loginDTO = new LoginDTO();
@@ -29,7 +30,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 			result = SUCCESS;
 			BuyItemDAO buyItemDAO = new BuyItemDAO();
 			BuyItemDTO buyItemDTO = (buyItemDAO.getBuyItemInfo());
-			int intItemStock = buyItemDTO.getItemStock();
+			int intItemStock = Integer.parseInt(buyItemDTO.getItemStock());
 			for (int i = 1; i <= intItemStock; i++) {
 				itemStockList.add(i);
 			}
@@ -38,6 +39,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 			session.put("buyItem_Name", buyItemDTO.getItemName());
 			session.put("buyItem_Price", buyItemDTO.getItemPrice());
 			session.put("buyItem_Stock", buyItemDTO.getItemStock());
+			session.put("userName",loginDTO.getUserName());
 			return result;
 		}
 		return result;
